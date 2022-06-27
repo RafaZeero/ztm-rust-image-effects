@@ -1,4 +1,16 @@
-function init() {
+async function init() {
+  // import rust before listening to scripts
+  let rustApp = null
+
+  try {
+    rustApp = await import('../pkg')
+  } catch (err) {
+    console.error(err)
+    return
+  }
+
+  console.log(rustApp)
+
   // select element ID 'upload' at the DOM
   const input = document.getElementById('upload')
 
