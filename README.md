@@ -27,7 +27,16 @@
 
 ### Screenshots
 
-![](./screenshot.jpg)
+
+Imagem de teste 01:           |  Imagem resultado (rotação 180º):
+:-------------------------:|:-------------------------:
+![imagem padrao](imgs/miranha-png.png)  |  ![imagem pós-efeito](imgs/imagem01.PNG)
+
+Imagem de teste 02:           |  Imagem resultado (rotação 180º E grayscale):
+:-------------------------:|:-------------------------:
+![imagem padrao](imgs/worms-png.png)  |  ![imagem pós-efeito](imgs/imagem02.PNG)
+
+
 
 - Esse projeto é responsivo e o ideal é que o usuário envie imagens .PNG que não sejam tão grandes, menor que 5mb para um desempenho melhor do aplicativo.
 
