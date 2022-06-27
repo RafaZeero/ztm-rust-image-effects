@@ -9,8 +9,6 @@ async function init() {
     return
   }
 
-  console.log(rustApp)
-
   // select element ID 'upload' at the DOM
   const input = document.getElementById('upload')
 
@@ -27,8 +25,7 @@ async function init() {
       /^data:image\/(png|jpeg|jpg);base64,/,
       ''
     )
-    console.log('raw file: ', input.files[0])
-    console.log('base64 file: ', base64)
+    rustApp.grayscale(base64)
   }
 
   input.addEventListener('change', () => {

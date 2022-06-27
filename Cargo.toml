@@ -10,3 +10,11 @@ crate-type = ["cdylib"]
 
 [dependencies]
 wasm-bindgen = "0.2.76"
+base64 = "0.13.0"
+image = "0.23.14"
+
+# choose the specific dependency so it won't download it all
+[dependencies.web-sys]
+version = "0.3.4"
+# this feature will export javascript console features
+features = ["console"]
