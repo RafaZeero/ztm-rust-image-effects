@@ -36,6 +36,22 @@
         transform: translateX(25%);
       }
     }
+
+    /* Spinner CSS */
+    .spinner {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: conic-gradient(#0000 10%, #474bff);
+      -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+      animation: spinner-zp9dbg 1s infinite linear;
+    }
+
+    @keyframes spinner-zp9dbg {
+      to {
+        transform: rotate(1turn);
+      }
+    }
   </style>
 </head>
 
@@ -43,18 +59,30 @@
   <div class="bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500"></div>
   <div class="bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500"></div>
   <div class="bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500"></div>
-  <div class="flex items-center justify-center h-screen relative z-100">
+  <div class="flex items-center justify-center max-h-full mt-20 overflow-visible relative z-100">
 
     <div class="bg-white bg-opacity-95 border shadow-lg p-10 text-center max-w-2xl rounded-2xl">
       <h1 class="text-5xl mb-8">Image Effects</h1>
       <p class="mb-4">Need to do some basic image manipulation? Just upload your image below. We'll take care of the
         rest.</p>
-      <label class="bg-red-500 text-black w-full p-6 block cursor-pointer font-bold mb-4 rounded-xl">
+      <label class="bg-gray-300 text-black w-full p-6 block cursor-pointer font-bold mb-4 rounded-xl">
         <!-- File Input -->
-        <input type="file" id="upload" accept=".png" class="hidden">
-        Upload PNG Image
+        <input type="file" id="upload_gray" accept=".png" class="hidden" />
+        Upload PNG Image to Grayscale
+      </label>
+      <label class="bg-black text-red-500 w-full p-6 block cursor-pointer font-bold mb-4 rounded-xl">
+        <input type="file" id="upload_upsidedown" accept=".png" class="hidden" />
+        Upload PNG Image to rotate it 180degrees
+      </label>
+      <label
+        class="bg-gray-300 border-4 border-red-500 text-red-500 w-full p-6 block cursor-pointer font-bold mb-4 rounded-xl">
+        <input type="file" id="upload_both" accept=".png" class="hidden" />
+        Upload PNG Image to both effects
       </label>
       <!-- Image -->
+      <div class='flex items-center justify-center hidden' id="spinner">
+        <div class="spinner"></div>
+      </div>
       <img id="new-img" class="w-auto mx-auto">
     </div>
 
