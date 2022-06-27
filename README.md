@@ -1,6 +1,7 @@
 # Rust Image Effects
 - Projeto de edição de imagens permite que o usuário faça um upload de uma imagem e receba a imagem feita as devidas transformações, como rotacionar e transformar cores para tons de cinza. 
 - Projeto realizado com Rust, html e javascript e o objetivo final era utilizar o Rust para compreender e criar um projeto que utilize Wasm (Web Assembly).
+- Web Assembly é um código de mais baixo nível, em formato binário, ou seja, mais próximo a linguagem das máquinas e de difícil compreensão (na minha opinião). Ele foi utilizado para alterar as características das imagens.
 - O projeto também utiliza Webpack para compilar os módulos do Javascript.
 - Conteúdo aplicado nas aulas de [Zero To Mastery](https://zerotomastery.io/).
 
